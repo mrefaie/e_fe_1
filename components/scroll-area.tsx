@@ -1,3 +1,4 @@
+"use client";
 import { cn } from "@/lib/utils";
 
 export default function ScrollArea({
@@ -8,7 +9,7 @@ export default function ScrollArea({
   maxHeight: string;
 }) {
   return (
-    <div className={cn("overflow-y-auto w-full", `h-[${maxHeight}]`)}>
+    <div className={cn("overflow-y-auto w-full")} style={{ height: maxHeight }}>
       {children}
     </div>
   );
